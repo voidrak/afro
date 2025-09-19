@@ -16,7 +16,7 @@ const mode = useColorMode()
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
-      <Button variant="outline">
+      <Button variant="outline" class="cursor-pointer dark:hover:bg-accentFirst hover:text-white">
         <Icon
           icon="radix-icons:moon"
           class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
@@ -29,9 +29,9 @@ const mode = useColorMode()
       </Button>
     </DropdownMenuTrigger>
     <DropdownMenuContent align="end">
-      <DropdownMenuItem @click="mode = 'light'"> Light </DropdownMenuItem>
-      <DropdownMenuItem @click="mode = 'dark'"> Dark </DropdownMenuItem>
-      <DropdownMenuItem @click="mode = 'auto'"> System </DropdownMenuItem>
+      <DropdownMenuItem class="cursor-pointer" @click="mode = 'light'"> Light </DropdownMenuItem>
+      <DropdownMenuItem class="cursor-pointer" @click="mode = 'dark'"> Dark </DropdownMenuItem>
+      <DropdownMenuItem class="cursor-pointer" @click="mode = 'auto'"> System </DropdownMenuItem>
     </DropdownMenuContent>
   </DropdownMenu>
 </template>
