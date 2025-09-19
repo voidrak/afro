@@ -49,10 +49,9 @@ const closeMobileMenu = () => {
       <!-- Desktop Actions -->
       <div class="hidden md:flex gap-x-4">
         <ThemeToggle />
-        <Button class="relative dark:text-white" size="lg">
-          Register
-          <a href="#contact" class="absolute inset-0 bg"></a>
-        </Button>
+        <RouterLink :to="{ name: 'Welcome' }">
+          <Button class="relative dark:text-white" size="lg"> Register </Button>
+        </RouterLink>
       </div>
 
       <!-- Mobile Menu Button -->
