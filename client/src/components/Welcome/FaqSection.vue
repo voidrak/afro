@@ -84,7 +84,7 @@ const filteredFaqs = computed(() => {
 </script>
 
 <template>
-  <section class="py-20">
+  <section class="pb-48">
     <div class="container">
       <div class="mx-auto max-w-3xl">
         <!-- Header -->

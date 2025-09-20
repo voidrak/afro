@@ -49,7 +49,7 @@ const closeMobileMenu = () => {
       <!-- Desktop Actions -->
       <div class="hidden md:flex gap-x-4">
         <ThemeToggle />
-        <RouterLink :to="{ name: 'Welcome' }">
+        <RouterLink :to="{ name: 'Register' }">
           <Button class="relative dark:text-white" size="lg"> Register </Button>
         </RouterLink>
       </div>
@@ -131,7 +131,7 @@ const closeMobileMenu = () => {
 
         <!-- Mobile Actions -->
         <RouterLink
-          :to="{ name: 'Welcome' }"
+          :to="{ name: 'Register' }"
           class="absolute bottom-0 left-0 right-0 p-6 border-t dark:border-gray-700"
         >
           <Button class="w-full dark:text-white" size="lg" @click="closeMobileMenu">

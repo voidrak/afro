@@ -7,11 +7,21 @@ const routes = [
     name: 'Welcome',
     component: Welcome,
   },
-  // {
-  //   path: '/portfolio/:id',
-  //   name: 'PortfolioDetail',
-  //   component: () => import('@/views/PortfolioDetailView.vue'),
-  // },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('@/views/Auth/RegisterView.vue'),
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/Auth/LoginView.vue'),
+  },
+  {
+    path: '/forget-password',
+    name: 'ForgotPassword',
+    component: () => import('@/views/Auth/ForgetPassword.vue'),
+  },
 ];
 
 const router = createRouter({
