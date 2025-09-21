@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import NewArrivals from './NewArrivals.vue'
 import backgroundImage from '/images/Home_Page_Girl.png'
-import Button from '../ui/button/Button.vue'
 import { Rocket, Sparkles, Play, Zap, Shield, Gem } from 'lucide-vue-next'
 </script>
 
@@ -13,14 +13,16 @@ import { Rocket, Sparkles, Play, Zap, Shield, Gem } from 'lucide-vue-next'
     <div class="absolute z-0 inset-0 bg-black/30 isolate"></div>
 
     <!-- Hero content -->
-    <div class="relative text-white px-8 pt-24 md:pt-32 md:px-16 z-10">
+    <div class="relative text-white px-8 pt-36 md:pt-48 md:px-16 z-10">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">
-        Welcome to <span class="text-accentFirst"> Afro Chicks</span>
+        Explore <span class="text-accentFirst"> Exclusive</span> and<span class="text-accentFirst">
+          Erotic</span
+        >
       </h1>
       <p class="text-xl md:text-2xl mb-8 max-w-2xl">
-        Find Beauty and Sexy Ethiopian Girls - Your Ultimate Destination for All your needs
+        A Gateway to Unveil Your Deepest Desires and Fantasies
       </p>
-
+      <!-- Card -->
       <div class="mt-8 grid md:mt-10 lg:mt-12 gap-4 md:grid-cols-3 max-w-2xl">
         <div
           class="flex items-center space-x-4 rounded-lg border border-white/10 bg-white/10 p-4 backdrop-blur-sm hover:bg-accent/40 cursor-pointer"
@@ -32,6 +34,7 @@ import { Rocket, Sparkles, Play, Zap, Shield, Gem } from 'lucide-vue-next'
             <h3 class="text-white">Fast Service</h3>
           </div>
         </div>
+
         <div
           class="flex items-center space-x-4 rounded-lg border border-white/10 bg-white/10 p-4 backdrop-blur-sm hover:bg-accent/40 cursor-pointer"
         >
@@ -53,10 +56,7 @@ import { Rocket, Sparkles, Play, Zap, Shield, Gem } from 'lucide-vue-next'
           </div>
         </div>
       </div>
-
-      <RouterLink :to="{ name: 'Welcome' }" class="mt-8 md:mt-10 inline-block">
-        <Button size="xxl">Get Started</Button>
-      </RouterLink>
     </div>
   </div>
+  <NewArrivals />
 </template>

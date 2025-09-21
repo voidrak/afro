@@ -5,9 +5,9 @@ import Button from '../ui/button/Button.vue'
 
 const nav: Array<{ title: string; pathName: string }> = [
   { title: 'Home', pathName: 'Welcome' },
-  { title: 'Services', pathName: 'Welcome' },
-  { title: 'Portfolio', pathName: 'Welcome' },
-  { title: 'Contact', pathName: 'Welcome' },
+  { title: 'History', pathName: 'Welcome' },
+  { title: 'Favorites', pathName: 'Welcome' },
+  { title: 'Contact Us', pathName: 'Welcome' },
 ]
 
 const isMobileMenuOpen = ref(false)
@@ -38,7 +38,7 @@ const closeMobileMenu = () => {
           :to="{ name: item.pathName }"
           v-for="(item, index) in nav"
           :key="index"
-          class="hover:bg-accentFirst group relative cursor-pointer p-2 w-20 text-center rounded-md"
+          class="hover:bg-accentFirst group relative cursor-pointer p-2 w-fit text-center rounded-md"
         >
           <span class="scroll-m-20 text-lg font-semibold tracking-tight group-hover:text-white">
             {{ item.title }}
@@ -49,8 +49,8 @@ const closeMobileMenu = () => {
       <!-- Desktop Actions -->
       <div class="hidden md:flex gap-x-4">
         <ThemeToggle />
-        <RouterLink :to="{ name: 'Register' }">
-          <Button class="relative dark:text-white" size="lg"> Register </Button>
+        <RouterLink :to="{ name: 'Login' }">
+          <Button class="relative dark:text-white" size="lg"> Get Started </Button>
         </RouterLink>
       </div>
 
@@ -131,11 +131,11 @@ const closeMobileMenu = () => {
 
         <!-- Mobile Actions -->
         <RouterLink
-          :to="{ name: 'Register' }"
+          :to="{ name: 'Login' }"
           class="absolute bottom-0 left-0 right-0 p-6 border-t dark:border-gray-700"
         >
           <Button class="w-full dark:text-white" size="lg" @click="closeMobileMenu">
-            Register
+            Get Started
           </Button>
         </RouterLink>
       </div>
