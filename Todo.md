@@ -19,4 +19,14 @@
  - manage user , agent
  - Mange Gs
  - Create Announcement
- - 
+  
+---
+
+## Backend
+  ### Girls Table
+  - full name
+  - age
+  - height
+  - weight
+  - description
+  - body_color

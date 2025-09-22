@@ -5,28 +5,14 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Heart } from 'lucide-vue-next'
 import { toast } from 'vue-sonner'
+import type { Girls } from '@/types/GirlsType'
+import { RouterLink } from 'vue-router'
 
-interface Product {
-  id: number
-  name: string
-  price: number
-  originalPrice?: number
-  rating: number
-  reviews: number
-  image: string
-  isNew: boolean
-  isFavorite: boolean
-  description: string
-}
-
-const newArrivals = ref<Product[]>([
+const newArrivals = ref<Girls[]>([
   {
     id: 1,
     name: 'Marti',
     price: 2500,
-    originalPrice: 3200,
-    rating: 4.8,
-    reviews: 24,
     image: '/images/Home_Page_Girl.png',
     isNew: true,
     isFavorite: false,
@@ -36,8 +22,6 @@ const newArrivals = ref<Product[]>([
     id: 2,
     name: 'Meri',
     price: 1800,
-    rating: 4.6,
-    reviews: 18,
     image: '/images/Home_Page_Girl.png',
     isNew: true,
     isFavorite: false,
@@ -47,9 +31,6 @@ const newArrivals = ref<Product[]>([
     id: 3,
     name: 'Tigi',
     price: 3000,
-    originalPrice: 3800,
-    rating: 4.9,
-    reviews: 32,
     image: '/images/Home_Page_Girl.png',
     isNew: true,
     isFavorite: true,
@@ -59,8 +40,6 @@ const newArrivals = ref<Product[]>([
     id: 4,
     name: 'Kidi',
     price: 2200,
-    rating: 4.7,
-    reviews: 15,
     image: '/images/Home_Page_Girl.png',
     isNew: true,
     isFavorite: false,
@@ -84,11 +63,6 @@ const toggleFavorite = (productId: number): void => {
       description: `You have removed ${product?.name} from your favorites`,
     })
   }
-}
-
-const addToCart = (productId: number): void => {
-  console.log('Added to cart:', productId)
-  // Add cart functionality here
 }
 </script>
 
@@ -151,9 +125,9 @@ const addToCart = (productId: number): void => {
               </div>
 
               <!-- Add to Cart Button -->
-              <Button @click="addToCart(product.id)" class="w-full" variant="outline">
-                View Details
-              </Button>
+              <RouterLink :to="{ name: 'GirlDetails' }">
+                <Button class="w-full" variant="outline"> View Details </Button>
+              </RouterLink>
             </div>
           </CardContent>
         </Card>

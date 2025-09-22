@@ -38,12 +38,12 @@ const faqs = [
     category: 'general',
     question: 'Where did you get the girls?',
     answer:
-      'We carefully selected our team members from various locations in Ethiopia. From university students to working professionals, they come from diverse backgrounds.',
+      'We carefully selected our girls from various locations in Ethiopia. From university students to working professionals, they come from diverse backgrounds.',
   },
   {
     id: 'faq-5',
     category: 'general',
-    question: 'Are the girls safe?',
+    question: 'Are the girls safe (health) ?',
     answer:
       'All the girls in our platform are tested regularly for sexually transmitted infections (STIs) and HIV. we also ensure that they work in safe and secure environments.',
   },
@@ -84,8 +84,8 @@ const filteredFaqs = computed(() => {
 </script>
 
 <template>
-  <section class="pb-48">
-    <div class="container">
+  <section class="pb-48 px-3 pt-8">
+    <div class="container mx-auto">
       <div class="mx-auto max-w-3xl">
         <!-- Header -->
         <div class="mb-14 text-center">

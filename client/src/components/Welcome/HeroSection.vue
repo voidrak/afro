@@ -6,7 +6,7 @@ import { Rocket, Sparkles, Play, Zap, Shield, Gem } from 'lucide-vue-next'
 
 <template>
   <div
-    class="h-[calc(100vh-2rem)] bg-cover bg-top bg-no-repeat relative"
+    class="min-h-[calc(100vh-2rem)] bg-cover bg-top bg-no-repeat relative pb-4"
     :style="`background-image: url('${backgroundImage}')`"
   >
     <!-- Overlay for better text readability (optional) -->
